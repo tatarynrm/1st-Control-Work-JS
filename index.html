@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Control Work</title>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="text" id="text"></div>
+        <div class="buttons" id="buttons">
+            <button class="edit" id="edit">Edit</button>
+            <button class="style" id="style">Style</button>
+        </div>
+        <div class="edit-area" id="editArea">
+            <div class="edit-area-zone" id="zone">
+                <textarea name="textarea" id="textarea" cols="90" rows="10">
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </textarea>
+                <div class="edit-zone">
+                    <button class="add" id="add">add</button>
+                    <button class="save" id="save">save</button>
+                </div>
+            </div>
+
+            <div class="font-edit" id="font-edit">
+                <div class="fonts">
+                    <h3>Font Size:</h3>
+                    <form name="f1">
+                        <input type="radio" name="font" id="12" class="12px">12px
+                        <input type="radio" name="font" id="14" class="14px">14px
+                        <input type="radio" name="font" id="16" class="16px">16px
+                        <input type="radio" name="font" id="18" class="18px">18px
+                        <input type="radio" name="font" id="20" class="20px">20px
+                    </form>
+                    <h3>Font Family:</h3>
+                    <select name="fontfamily" id="fontfamily">
+                            <option name='ff' value="Choose option">Choose option</option>
+                            <option name='ff' value="cursive">cursive</option>
+                            <option name='ff' value="fantasy">fantasy</option>
+                            <option name='ff' value="monospace">monospace</option>
+                            <option name='ff' value="sens-serif">sens-serif</option>
+                        </select>
+                    <div class="colors">
+                        <h3>Colors:</h3>
+                        <div class="colors-buttons">
+                            <button href="#" class="color-btn" id="text-color">Color of Text</button>
+                            <button href="#" class="color-btn" id="background-color">Background Color</button>
+                        </div>
+
+                        <div class="textcol" id="textcol">
+                            <div class="red square" id="red"></div>
+                            <div class="blue square" id="blue"></div>
+                            <div class="green square" id="green"></div>
+                            <div class="black square" id="black"></div>
+                            <div class="yellow square" id="yellow"></div>
+                            <div class="pink square" id="pink"></div>
+                            <div class="lavenderblush square" id="white"></div>
+                            <div class="purple square" id="purple"></div>
+                            <div class="coral square" id="coral"></div>
+                        </div>
+                        <div class="backgroundcol" id="textcolor">
+                            <div class="red squarebg"></div>
+                            <div class="blue squarebg"></div>
+                            <div class="green squarebg"></div>
+                            <div class="black squarebg"></div>
+                            <div class="yellow squarebg"></div>
+                            <div class="purple squarebg"></div>
+                            <div class="lavenderblush squarebg"></div>
+                            <div class="purple squarebg"></div>
+                            <div class="coral squarebg"></div>
+                        </div>
+                    </div>
+                    <div class="fontstyle">
+                        <h3>Style</h3>
+                        <form name="form3">
+                            <input type="checkbox" name="bold" class="bold" id="bold-text" onchange=checkbox()>
+                            <label for="bold-text"> <b>Bold Text</b></label>
+                            <input type="checkbox" name="italic" class="italic" id="cursive-text" onchange=checkbox()>
+                            <label for="cursive-text"> <i>Cursive Text</i></label>
+                        </form>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div id="tableCont" class="text">
+            <h3>Chose what you want:</h3>
+            <form name="tableList">
+                <p><input type="radio" id="chose1" name="choseAdd">table
+                    <input type="radio" id="chose2" name="choseAdd">list</p>
+            </form>
+
+            <div id="table">
+                <form name="createTable" id="createTable">
+                    <p>Count TR:<input type="text" id="TR"></p>
+                    <p>Count TD:<input type="text" id="td"></p>
+                    <h3>Add style to your table:</h3>
+                    <p>Width of TD: <input type="text" name="wtd" id="wtd"></p>
+                    <p>Height of TD: <input type="text" name="htd" id="htd"></p>
+                    <p>Width of border: <input type="text" name="wbr" id="wbr"> Type of border: <select name="border" id="border">
+                    <option class="solid" value="solid">solid</option>
+                    <option class="dashed" value="dashed">dashed</option>
+                    <option class="dotted" value="dotted">dotted</option>
+                    <option class="duble" value="double">double</option>
+                </select> Color of border: <select name="colorBorder" id="colorBorder">
+                    <option class="red" value="red">red</option>
+                    <option class="blue" value="blue">blue</option>
+                    <option class="green" value="green">green</option>
+                    <option class="yellow" value="yellow">yellow</option>
+                    <option class="purple" value="purple">purple</option>
+                    <option class="black" value="black">black</option>
+                </select></p>
+                    <input type="button" class="style" id="createTb" value="Create table">
+                </form>
+            </div>
+            <div id="list">
+                <form name="createList" id="createList">
+                    <p>Count Li:<input type="text" id="li"></p>
+                    <p>Type of marks:<input type="text" id="typeMarks"></p>
+                    <input type="button" class="style" id="createLi" value="Create list">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
